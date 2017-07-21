@@ -1,0 +1,7 @@
+version: "2.0"
+
+services:
+  consensus:
+    build: .
+    ports:
+      - "4200:4200"

@@ -2,26 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fae019db-9442-4b3d-b1b5-a0c3763aa516" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/default.conf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/0.74b9c8e4089a417dd35d.chunk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/1.cee7993f7f5702eaffb4.chunk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/10.5b02341af6439edaabf9.chunk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/11.fc7de26890d1daca5d39.chunk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/2.294cce25db2cef1c213b.chunk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/3.8e4608fcf4fc25478fd8.chunk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/4.da95b0e105b422e4e9e5.chunk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/5.ad98d2c0fb8400ebeea3.chunk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/6.c2466bd283d8339e1d73.chunk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/7.e32d99342419180a8f1e.chunk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/8.31eeea73787466d0dc31.chunk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/9.77db4662bf8b2775f1b0.chunk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/inline.44dc605d0fde30329390.bundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/main.c5677d79a3fd727d0dd4.bundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/scripts.b8c3b4ad318a1d494c74.bundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/vendor.c3ce11d79c9e67e9703c.bundle.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dockerfile" afterPath="$PROJECT_DIR$/Dockerfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/assets/i18n/US/en.json" afterPath="$PROJECT_DIR$/dist/assets/i18n/US/en.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docker-compose.yml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/default.conf" afterPath="$PROJECT_DIR$/default.conf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -50,10 +33,20 @@
         </entry>
       </file>
       <file leaf-file-name="default.conf" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dist/default.conf">
+        <entry file="file://$PROJECT_DIR$/default.conf">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="612">
               <caret line="36" column="1" lean-forward="false" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="docker-compose.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -119,7 +112,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/pages/editors/editors.module.ts" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.html" />
         <option value="$PROJECT_DIR$/src/app/pages/editors/components/ckeditor/ckeditor.component.ts" />
@@ -170,6 +162,7 @@
         <option value="$PROJECT_DIR$/src/restApi/newUsers.services.ts" />
         <option value="$PROJECT_DIR$/src/restApi/tetants.services.ts" />
         <option value="$PROJECT_DIR$/dist/default.conf" />
+        <option value="$PROJECT_DIR$/dist/docker-compose.yml" />
       </list>
     </option>
   </component>
@@ -215,20 +208,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="consensus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="consensus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -244,15 +223,17 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\QPAIR\Desktop\consensus" />
+      <recent name="C:\Users\QPAIR\Desktop\consensus\dist" />
+      <recent name="C:\Users\QPAIR\Desktop\Consensus-web\src\app\pages" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\QPAIR\Desktop\Consensus-web\src\app\pages" />
       <recent name="C:\Users\QPAIR\Desktop\Consensus-web\src\app\pages\tables" />
       <recent name="C:\Users\QPAIR\Desktop\Consensus-web\src\app\pages\editors\components\" />
       <recent name="C:\Users\QPAIR\Desktop\Consensus-web\src\app\pages\editors\components\ckeditor1" />
       <recent name="C:\Users\QPAIR\Desktop\Consensus-web\src\app\pages\community\add-community" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\QPAIR\Desktop\Consensus-web\src\app\pages" />
     </key>
   </component>
   <component name="RunManager">
@@ -342,19 +323,19 @@
       <workItem from="1500560313538" duration="13453000" />
       <workItem from="1500576574693" duration="10748000" />
       <workItem from="1500645207349" duration="20778000" />
-      <workItem from="1500670365267" duration="817000" />
+      <workItem from="1500670365267" duration="1448000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="255256000" />
+    <option name="totallyTimeSpent" value="255887000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23076923" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23076923" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13266444" sideWeight="0.13593256" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.86406744" order="1" side_tool="false" content_ui="tabs" />
@@ -384,13 +365,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/pages/forms/components/layouts/layouts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -733,7 +707,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/default.conf">
+    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/default.conf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="1" lean-forward="false" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
