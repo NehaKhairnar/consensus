@@ -1,10 +1,15 @@
-#alpine image
-FROM nginx:alpine
+FROM node:6.10.0
 
-#create the server and location configuration
-COPY default.conf /etc/nginx/conf.d/default.conf
+COPY . /var/www
 
-#copies the build app to the default location
-COPY dist /usr/share/nginx/html
+WORKDIR /var/www/consensus-backend/server
 
-EXPOSE 4200
+RUN cd /var/www/consensus-backend/server
+
+ 
+RUN npm install
+  
+
+EXPOSE 3001
+
+ENTRYPOINT ["npm", "start"]

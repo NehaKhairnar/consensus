@@ -21,7 +21,7 @@ const authCheck = jwt({
         jwksRequestsPerMinute: 5,
         jwksUri: "https://ramani.auth0.com/.well-known/jwks.json"
     }),
-    audience: 'http://consensus.deploybytes.com/api/',
+    audience: 'http://localhost:3001/api/',
     issuer: "https://ramani.auth0.com/",
     algorithms: ['RS256']
 });
@@ -29,7 +29,7 @@ const authCheck = jwt({
 
 
 var mongojs = require('mongojs');
-var db = mongojs('mongodb://52.73.99.21:27017/consensus', ['community','tenant','user']);
+var db = mongojs('mongodb://34.227.207.75:27017/consensus', ['community','tenant','user']);
 
 var  userId;var communityId;
 
@@ -46,10 +46,15 @@ console.log(req.params.user_id+"  id is hre")
             return err;}
 
         else{
-          communityId=  user._id;
-          console.log(communityId);
-            res.json(user);
-
+          try {
+              communityId = user._id;
+              console.log(communityId);
+              res.json(user);
+          }
+          catch(err) {
+              console.log("exception occured for community" );
+              res.json(user);
+          }
         }
 
     });
@@ -199,19 +204,29 @@ app.put('/api/editTenant/:id', function(request, response) {
 
 });
 
-app.get('/api/viewTenant/:tennatid', function(request, response) {
 
+app.get('/api/viewTenant/:id', function(request, response) {
 
-    db.tenant.findOne({ '_id' :request.params.id },function(err, returned_value){
-        if(err){
+console.log(request.params.id);
+
+    db.tenant.findOne({ '_id' :request.params.id }, function(err,result) {
+
+        if (err){
             console.log(err);
-            response.json({status: 'failed', err: err})
+            return err;
         }
+
         else{
-            console.log(returned_value);
-            response.json(returned_value);
+
+
+                    console.log(JSON.stringify(result))
+                    response.json(result);
+
+
         }
+
     });
+
 });
 
 
