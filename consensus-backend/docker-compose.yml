@@ -5,4 +5,3 @@ client:
         - "49153:49153"
     volumes:
         - .:/usr/src/app
-    command: npm start
