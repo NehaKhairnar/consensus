@@ -8,7 +8,9 @@ RUN cd /var/www/consensus-backend/server
 
  
 RUN npm install
-  
+
+RUN npm install jwks-rsa
+
 
 EXPOSE 3001
 
