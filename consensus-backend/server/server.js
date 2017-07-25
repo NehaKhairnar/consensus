@@ -29,7 +29,7 @@ const authCheck = jwt({
 
 
 var mongojs = require('mongojs');
-var db = mongojs('mongodb://34.227.207.75:27017/consensus', ['community','tenant','user']);
+var db = mongojs('mongodb://Hetal:Ah123456@ds121543.mlab.com:21543/consensus', ['community','tenant','user']);
 
 var  userId;var communityId;
 
@@ -229,7 +229,7 @@ console.log(request.params.id);
 
 });
 
-
+/*
 
 app.get('/api/deals/private', authCheck, (req,res)=>{
   let deals = [
@@ -277,7 +277,7 @@ app.get('/api/deals/private', authCheck, (req,res)=>{
   },
   ];
   res.json(deals);
-})
+})*/
 
 app.listen(3001);
 console.log('Listening on localhost:3001');
