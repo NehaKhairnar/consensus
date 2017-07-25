@@ -4,21 +4,32 @@ const express = require('express');
 var router = express.Router();
 const jwt = require('express-jwt');
 const jwks = require('jwks-rsa');
-const cors = require('cors');
+var  cors = require('cors');
 const bodyParser = require('body-parser');
 var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var app = express();
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+
+var mongojs = require('mongojs');
+var db = mongojs('mongodb://prasadsuvarapu:prasadc85!@ds121543.mlab.com:21543/consensus', ['community','tenant','user']);
 
 app.options('*', cors());
 app.use(cors());
 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+   // res.header("Access-Control-Allow-Origin", "*");
+   // res.setHeader('Access-Control-Allow-Methods', '*');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
+    // Set to true if you need the website to include cookies in the requests sent
+    // to the API (e.g. in case you use sessions)
+    res.setHeader('Access-Control-Allow-Credentials', true);
     next();
 });
 
@@ -36,8 +47,6 @@ const authCheck = jwt({
 
 
 
-var mongojs = require('mongojs');
-var db = mongojs('mongodb://prasadsuvarapu:prasadc85!@ds121543.mlab.com:21543/consensus', ['community','tenant','user']);
 
 var  userId;var communityId;
 
