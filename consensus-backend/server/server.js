@@ -12,6 +12,8 @@ var cookieParser = require('cookie-parser');
 var app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.options('*', cors())
 app.use(cors());
 
 const authCheck = jwt({
