@@ -29,7 +29,7 @@ const authCheck = jwt({
 
 
 var mongojs = require('mongojs');
-var db = mongojs('mongodb://Hetal:Ah123456@ds121543.mlab.com:21543/consensus', ['community','tenant','user']);
+var db = mongojs('mongodb://prasadsuvarapu:prasadc85!@ds121543.mlab.com:21543/consensus', ['community','tenant','user']);
 
 var  userId;var communityId;
 
