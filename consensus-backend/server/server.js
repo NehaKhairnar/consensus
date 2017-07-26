@@ -1,11 +1,11 @@
 'use strict';
 
-const express = require('express');
-var router = express.Router();
-const jwt = require('express-jwt');
-const jwks = require('jwks-rsa');
+var  express = require('express');
+//var router = express.Router();
+var  jwt = require('express-jwt');
+var jwks = require('jwks-rsa');
 var  cors = require('cors');
-const bodyParser = require('body-parser');
+var bodyParser = require('body-parser');
 var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
@@ -20,16 +20,17 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+
 app.use(function(req, res, next) {
    // res.header("Access-Control-Allow-Origin", "*");
    // res.setHeader('Access-Control-Allow-Methods', '*');
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.header('Access-Control-Allow-Headers', "Origin, X-Requested-With, Content-Type, Accept");
 
     // Set to true if you need the website to include cookies in the requests sent
     // to the API (e.g. in case you use sessions)
-    res.setHeader('Access-Control-Allow-Credentials', true);
+    res.header('Access-Control-Allow-Credentials', true);
     next();
 });
 
